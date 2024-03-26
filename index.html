@@ -51,7 +51,7 @@
                 Solicitud laboral <i class="fa-solid fa-briefcase"></i>
                 <span class="overlay"></span>
             </a>
-            <a type="button" class="solicitud" href="solicitud.html">
+            <a type="button" class="solicitud" id="miBoton">
                 Atención al cliente
                 <i class="fa-solid fa-circle-info"></i>
                 <span class="overlay"></span>
@@ -454,6 +454,41 @@
             </a>
         </div>
     </footer>
+
+    <!-- El modal -->
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <p>
+                ¡Tu voz importa, incluso en el anonimato! <br>
+                Denunciar de manera anónima es un acto valiente que puede marcar la diferencia. Tu integridad y
+                bienestar son fundamentales, y denunciar situaciones injustas, abusivas o ilegales en tu entorno laboral
+                es un paso crucial para construir un ambiente más seguro y justo.
+                No subestimes el impacto de tu testimonio. Tu valentía puede inspirar a otros a hacer lo mismo y
+                contribuir a la construcción de un entorno laboral donde reine la equidad y el respeto. ¡Tu silencio
+                nunca debería ser más fuerte que tu voz! <br>
+                Llama al : 449 919 24 34 <br>
+
+            </p>
+
+            <button onclick="cerrarModal()"><i class="fa-solid fa-x"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar el modal
+        function mostrarModal() {
+            document.getElementById('miModal').style.display = 'flex';
+        }
+
+        // Función para cerrar el modal
+        function cerrarModal() {
+            document.getElementById('miModal').style.display = 'none';
+        }
+
+        // Asociar la función mostrarModal al clic del botón
+        document.getElementById('miBoton').addEventListener('click', mostrarModal);
+    </script>
+
 
 
     <!--Jquery-->
