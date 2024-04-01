@@ -23,14 +23,10 @@ function sendMail(e) {
   } else if (validEmail.test(mail)) {
 
     let _datos = {
-      from: mail,
-      to: "ahnatalia25@gmail.com",
-      text: message,
       name: name,
       phone: phone,
       mail: mail,
-      message:message,
-      pass: "ofpiqbvozxznzqyt"
+      message:message
     }
 
     fetch('https://mesagrande-production.up.railway.app/mesagrande/sendmail', {
