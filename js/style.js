@@ -95,17 +95,17 @@ $(function () {
 });
 
 
-        // Función para mostrar el modal
-        function mostrarModal() {
-            document.getElementById('miModal').style.display = 'flex';
-        }
+// Función para mostrar el modal
+function mostrarModal() {
+  document.getElementById('miModal').style.display = 'flex';
+}
 
-        // Función para cerrar el modal
-        function cerrarModal() {
-            document.getElementById('miModal').style.display = 'none';
-        }
+// Función para cerrar el modal
+function cerrarModal() {
+  document.getElementById('miModal').style.display = 'none';
+}
 
-        // Asociar la función mostrarModal al clic del botón
-        document.getElementById('miBoton').addEventListener('click', mostrarModal);
+// Asociar la función mostrarModal al clic del botón
+document.getElementById('miBoton').addEventListener('click', mostrarModal);
 
 
