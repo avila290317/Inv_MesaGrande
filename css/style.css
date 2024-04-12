@@ -364,6 +364,7 @@ section {
 .carousel-content .inside .contents h2,
 .carousel-content .inside .contents p {
     color: var(--text-color);
+    text-align: justify;
 }
 
 .carousel-content .inside .contents p {
@@ -376,7 +377,6 @@ section {
     text-align: center;
     padding-bottom: 7rem;
     background-color: var(--second-bg-color);
-    margin-top: 20px;
 }
 
 .about-text {
@@ -919,6 +919,7 @@ section:nth-child(odd) .animate.scroll {
     }
 }
 
+/* Estilos para el modal */
 .modal {
     display: none;
     position: fixed;
@@ -926,60 +927,43 @@ section:nth-child(odd) .animate.scroll {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    overflow: auto;
-    animation: fadeIn 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+    overflow: auto; 
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 40px;
+    background-color: #fefefe; 
+    margin: auto; 
+    padding: 20px;
+    border: 1px solid var(--bg-color);
+    width: 80%; 
+    max-width: 600px; 
     border-radius: 10px;
-    max-width: 300px;
-    margin: 100px auto;
-    text-align: center;
-    animation: slideIn 0.5s ease;
-    font-size: 10px;
-}
-
-.modal-content p {
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    font-size: 120%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    color: black;
+    font-size: 15px;
+    text-align: justify;
 }
 
 .modal-content button {
     background-color: #7f0000;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .modal-content button:hover {
-    background-color: #a50000;
+    background-color: var(--main-color);
+    color: black;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-50px);
-    }
-
-    to {
-        transform: translateY(0);
+/* Media query para hacer el modal más pequeño en pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
     }
 }
